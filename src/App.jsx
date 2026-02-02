@@ -1,4 +1,6 @@
 import './index.css'
+import { Link } from 'react-router-dom'
+import CookieConsent from './CookieConsent'
 
 function App() {
   return (
@@ -186,8 +188,8 @@ function App() {
             <div>
               <h4 className="font-bold text-white mb-4">Information</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/privatlivspolitik" className="hover:text-white transition-colors">Privatlivspolitik</a></li>
-                <li><a href="/om-os" className="hover:text-white transition-colors">Om os</a></li>
+                <li><Link to="/privatlivspolitik" className="hover:text-white transition-colors">Privatlivspolitik</Link></li>
+                <li><Link to="/om-os" className="hover:text-white transition-colors">Om os</Link></li>
               </ul>
             </div>
           </div>
@@ -199,6 +201,9 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Cookie Consent */}
+      <CookieConsent />
     </div>
   )
 }
